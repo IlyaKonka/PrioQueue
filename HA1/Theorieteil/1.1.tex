@@ -41,6 +41,17 @@
 	\item Verteilung (dispatching): Prozessumschaltung
 	\item Betriebsmittelverwaltung (resource management): Belegen, Freigeben und Betreiben von Betriebsmitteln, Werkzeuge zur Prozesssynchronisation
 	\item Programmallokation (program allocation): Linken von Teilprogrammen, Laden und Verdrängen von Programmen in/aus dem Hauptspeicher
+	\item Dateiverwaltung (file mangement): 
+	\begin{itemize}
+		\item Organisation des SPeicherplatzes in Form von Dateien auf Datenträgern
+		\item Bereitstellung von Funktionen zur Speicherung, Modifikation und Wiedergewinnung der gespeicherten Informationen
+	\end{itemize}
+	\item Auftragsteuerung (job congtrol): Festlegnung der REihenfolge, in der die eingegangegen Aufträge und dereen Bestandteile bearbeitet werden sollen
+	\item Zuverläsigkeit (reliability):
+	\begin{itemize}
+		\item Funktionen zur Reaktion auf Störungen und Ausfälle der Rechnerhardware sowie auf Fehler in der Software
+		\item Korrektheit, Robustheit und Toleranz (ständig betriebsbereit unter der Aufrechterhaltung einer Mindestfunktionsfähigkeit)
+	\end{itemize}
 \end{enumerate}
 
 \vspace{\baselineskip}
@@ -73,9 +84,12 @@
 
  \large Wichtige Unterscheidung zwischen Mechanismen und Policies:
  \normalsize
+ 	Ein Mechanismus ist quasi analog zu einer Interface in Java, in dem es sagt was für Funktionalität angefordert wird; Policies sind eher wie dies implimentiert wird, analog zur Implimentation einer Interface in Java.
 	\begin{enumerate}
 		\item Mechanismus: Wie wird eine Aufgabe prinzipiell gelöst?
 		\item Policy: Welche Vorgaben/Parameter werden im konkreten Fall eingesetzt?
+
+
 	\end{enumerate}
 
 \vspace{\baselineskip}
@@ -87,6 +101,9 @@
 	\begin {itemize}
 		\item Existenz eines Timerszur Bereitstellung von Unterbrechungen $\Rightarrow$ Mechanismus
 		\item Entscheidung, wie lange die entsprechende Zeit für einzelne Anwendungen / Anwendungsgruppen eingestellt wird $\Rightarrow$ Policy
+
+		\item Es werden Daten, die in der Nähe gespeichert sind, mit in den Cache gebracht bzw. räumliche Lokalität wird ausgenutzt $\Rightarrow$ Mechanismus
+		\item Entscheidung, wie viele auf jeder Seite des ausgewählten Dateis genommen werden und was sie ersetzten sollten $\Rightarrow$ Policy
 	\end{itemize}
 \vspace{\baselineskip}
 \vspace{\baselineskip}
